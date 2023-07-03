@@ -30,6 +30,10 @@ class HomeFragment : Fragment() {
     private lateinit var searchView: SearchView
     private var contacts: MutableList<String> = mutableListOf()
 
+    fun scrollToTop(){
+        recyclerView.scrollToPosition(0)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
