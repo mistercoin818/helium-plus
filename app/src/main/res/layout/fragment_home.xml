@@ -24,4 +24,16 @@
         app:elevation="6dp"
         app:pressedTranslationZ="12dp" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="160dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/refresh"
+        app:backgroundTint="@color/white"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
