@@ -7,16 +7,18 @@ import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
+import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.madcampweek1.R
 
 class HomeFragment : Fragment() {
 
-    private lateinit var listView: ListView
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: ContactsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +27,12 @@ class HomeFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
-        listView = root.findViewById(R.id.listView)
+        recyclerView = root.findViewById(R.id.recyclerView)
+
+        adapter = ContactsAdapter()
+
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         // 연락처를 불러오기 위해 READ_CONTACTS 권한을 확인합니다.
         if (ContextCompat.checkSelfPermission(
@@ -35,7 +42,7 @@ class HomeFragment : Fragment() {
         ) {
             // 권한이 허용되었을 경우 연락처를 불러오는 함수를 호출합니다.
             val contacts = loadContacts()
-            displayContacts(contacts)
+            adapter.setContacts(contacts)
         } else {
             // 권한이 허용되지 않았을 경우 권한 요청을 합니다.
             requestContactsPermission()
@@ -72,13 +79,13 @@ class HomeFragment : Fragment() {
         permissions: Array<out String>,
         grantResults: IntArray
     ) {
-        @Suppress("deprecated")
+        @Suppress("DEPRECATION")
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSIONS_REQUEST_READ_CONTACTS) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // 권한이 허용되었을 경우 연락처를 불러오는 함수를 호출합니다.
                 val contacts = loadContacts()
-                displayContacts(contacts)
+                adapter.setContacts(contacts)
             } else {
                 // 권한이 거부되었을 경우 처리할 내용을 추가합니다.
                 // 이 예시에서는 거부되었다는 메시지를 출력합니다.
@@ -98,7 +105,7 @@ class HomeFragment : Fragment() {
             null,
             null,
             null,
-            null
+            ContactsContract.Contacts.DISPLAY_NAME + " ASC" // 가나다순으로 정렬하기 위해 추가
         )
 
         cursor?.use {
@@ -118,17 +125,44 @@ class HomeFragment : Fragment() {
     }
 
 
-    private fun displayContacts(contacts: List<String>) {
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, contacts)
-        listView.adapter = adapter
-    }
-
     private fun showToast(message: String) {
         // Toast 메시지를 출력하는 함수입니다. 필요에 따라 알맞게 구현하시면 됩니다.
     }
 
     companion object {
         private const val PERMISSIONS_REQUEST_READ_CONTACTS = 100
+    }
+}
+class ContactsAdapter : RecyclerView.Adapter<ContactsAdapter.ContactViewHolder>() {
+    private val contacts = mutableListOf<String>()
+
+    fun setContacts(contacts: List<String>) {
+        this.contacts.clear()
+        this.contacts.addAll(contacts)
+        notifyDataSetChanged()
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(android.R.layout.simple_list_item_1, parent, false)
+        return ContactViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
+        val contact = contacts[position]
+        holder.bind(contact)
+    }
+
+    override fun getItemCount(): Int {
+        return contacts.size
+    }
+
+    inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val textView: TextView = itemView.findViewById(android.R.id.text1)
+
+        fun bind(contact: String) {
+            textView.text = contact
+        }
     }
 }
 
