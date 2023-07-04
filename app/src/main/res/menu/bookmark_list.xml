@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/seoul"
+        android:title="서울"
+        />
+    <item
+        android:id="@+id/daejeon"
+        android:title="대전" />
+
+    <item
+        android:id="@+id/busan"
+        android:title="부산" />
+    <item
+        android:id="@+id/pohang"
+        android:title="포항"
+        />
+</menu>

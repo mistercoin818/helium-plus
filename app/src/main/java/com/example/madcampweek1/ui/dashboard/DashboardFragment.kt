@@ -16,17 +16,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
-//import com.example.tap.databinding.FragmentDashboardBinding
-//import com.example.tap.databinding.ItmeRecyclerViewBinding
 import com.bumptech.glide.Glide
 import com.example.madcampweek1.GalleryActivity
 import com.example.madcampweek1.GetImageActivity
 import com.example.madcampweek1.R
 import com.example.madcampweek1.databinding.FragmentDashboardBinding
-//import com.example.tap.GalleryActivity
-//import com.example.tap.GetImageActivity
-//import com.example.tap.R
 import com.google.android.material.internal.ContextUtils
 import com.google.android.material.internal.ContextUtils.getActivity
 
