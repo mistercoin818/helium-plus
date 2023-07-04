@@ -1,11 +1,8 @@
 package com.example.madcampweek1
 
-import android.app.ActivityOptions
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
 import com.bumptech.glide.Glide
 
 class GalleryActivity : AppCompatActivity() {
@@ -27,7 +24,6 @@ class GalleryActivity : AppCompatActivity() {
 
         //전체화면 뷰에서 다시 이미지 클릭하면 돌아옴.
         val ImgFull : ImageView = findViewById<ImageView>(R.id.image_full)
-//        ImgFull.setImageResource(img)
         ImgFull.setOnClickListener {
             supportFinishAfterTransition()
         }
