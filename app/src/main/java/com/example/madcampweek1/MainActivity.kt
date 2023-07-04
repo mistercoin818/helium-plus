@@ -10,54 +10,33 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.madcampweek1.databinding.ActivityMainBinding
 import com.example.madcampweek1.ui.home.HomeFragment
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
     private lateinit var navController: NavController
+    private val tabTextList = listOf("Contact", "Photos", "My Health")
+    private val tabIconList = listOf(R.drawable.icon_01n, R.drawable.icon_01n, R.drawable.icon_02d)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.hide()
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.viewPager01.adapter = ViewPagerAdapter(this)
 
-        val navView: BottomNavigationView = binding.navView
-
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-        // Add OnItemSelectedListener to BottomNavigationView
-        navView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.navigation_home -> {
-                    navController.navigate(R.id.navigation_home)
-                }
-
-                R.id.navigation_dashboard -> {
-                    navController.navigate(R.id.navigation_dashboard)
-                }
-
-                R.id.navigation_notifications -> {
-                    navController.navigate(R.id.navigation_notifications)
-                }
-            }
-            true
-        }
+        TabLayoutMediator(binding.tabLayout01, binding.viewPager01){
+                tab, pos ->
+            tab.text = tabTextList[pos]
+            tab.setIcon(tabIconList[pos])
+        }.attach()
     }
 
     private fun scrollToTopOfHomeFragment() {
         // Find the HomeFragment by ID
         val homeFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main)
+            supportFragmentManager.findFragmentById(R.id.viewPager01)
                 ?.childFragmentManager
                 ?.fragments
                 ?.find { it is HomeFragment } as? HomeFragment

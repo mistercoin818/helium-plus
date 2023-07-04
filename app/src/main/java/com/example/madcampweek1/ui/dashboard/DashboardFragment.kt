@@ -137,7 +137,7 @@ class DashboardFragment : Fragment() {
         boardAdapter.notifyDataSetChanged()
         val RV_board :RecyclerView = binding.rvBoard
         RV_board.adapter = boardAdapter
-        RV_board.layoutManager = GridLayoutManager(context, 3, GridLayoutManager.HORIZONTAL, false)
+        RV_board.layoutManager = GridLayoutManager(context, 3,  GridLayoutManager.VERTICAL, false)
 
         // 뷰 가릴려고 별짓을 다 하는 중.
 //        dashboardView = View.inflate(context, R.layout.fragment_dashboard, null) // 새로운 View 생성
