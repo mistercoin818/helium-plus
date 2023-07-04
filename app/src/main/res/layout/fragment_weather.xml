@@ -18,7 +18,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:letterSpacing="-0.05"
-            android:textColor="#000000"
             android:textSize="32sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/guideline1"
@@ -30,7 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:letterSpacing="-0.05"
-            android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/guideline1"
             app:layout_constraintTop_toBottomOf="@+id/tv_location_title" />
@@ -164,7 +162,7 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"

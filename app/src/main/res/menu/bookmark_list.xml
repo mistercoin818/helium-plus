@@ -5,14 +5,25 @@
         android:title="서울"
         />
     <item
+    android:id="@+id/busan"
+    android:title="부산" />
+    <item
         android:id="@+id/daejeon"
         android:title="대전" />
-
     <item
-        android:id="@+id/busan"
-        android:title="부산" />
+        android:id="@+id/daegu"
+        android:title="대구"
+        />
     <item
-        android:id="@+id/pohang"
-        android:title="포항"
+        android:id="@+id/incheon"
+        android:title="인천"
+        />
+    <item
+        android:id="@+id/gwangju"
+        android:title="광주"
+        />
+    <item
+        android:id="@+id/ulsan"
+        android:title="울산"
         />
 </menu>
