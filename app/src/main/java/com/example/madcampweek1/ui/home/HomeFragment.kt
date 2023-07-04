@@ -1,6 +1,7 @@
 package com.example.madcampweek1.ui.home
 
 import android.Manifest
+import android.animation.ObjectAnimator
 import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -10,6 +11,7 @@ import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.LinearInterpolator
 import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
@@ -110,6 +112,13 @@ class HomeFragment : Fragment() {
                 Manifest.permission.READ_CONTACTS
             ) == PackageManager.PERMISSION_GRANTED
         ) {
+            // 버튼 애니메이션 시작
+            val rotation = ObjectAnimator.ofFloat(btnRefresh, View.ROTATION, 0f, 360f)
+            rotation.duration = 1000 // 애니메이션 지속 시간 (밀리초)
+            rotation.interpolator = LinearInterpolator()
+            rotation.repeatCount = 0 // 애니메이션 반복 횟수 (0은 반복하지 않음)
+            rotation.start()
+
             contacts = loadContacts()
             adapter.setContacts(contacts)
             showToast("Contacts refreshed.")
