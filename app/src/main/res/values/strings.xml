@@ -3,4 +3,6 @@
     <string name="title_contact">contact</string>
     <string name="title_gallery">gallery</string>
     <string name="title_weather">weather</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
 </resources>

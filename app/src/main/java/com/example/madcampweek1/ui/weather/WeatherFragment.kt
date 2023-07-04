@@ -12,26 +12,30 @@ import android.location.LocationManager
 import android.os.Bundle
 import android.provider.Settings
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.madcampweek1.R
 import com.example.madcampweek1.databinding.FragmentWeatherBinding
+import com.google.android.material.navigation.NavigationView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.IOException
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
-
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 @Suppress("DEPRECATION")
@@ -59,19 +63,80 @@ class WeatherFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentWeatherBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navigationView: NavigationView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setRefreshButton()
         checkAllPermissions()
+
+
+
+        drawerLayout = view.findViewById(R.id.drawerLayout)
+        // 사이드바 열기 버튼 설정
+        val openDrawerButton: Button = view.findViewById(R.id.bookmark)
+        openDrawerButton.setOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+        navigationView = view.findViewById(R.id.navigation_view)
+        navigationView.setNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.seoul -> {
+                    val address = getCurrentAddress(37.514575, 127.0495556) //주소가 null 이 아닐 경우 UI 업데이트
+                    address?.let {
+                        binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
+                        binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
+                    }
+
+                    getAirQualityData(37.514575, 127.0495556)
+                    true
+                }
+                R.id.daejeon -> {
+                    // 두 번째 아이템이 클릭되었을 때 실행될 동작
+                    val address = getCurrentAddress(36.37366895657045, 127.3657259065586 ) //주소가 null 이 아닐 경우 UI 업데이트
+                    address?.let {
+                        binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
+                        binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
+                    }
+
+                    getAirQualityData(36.37366895657045, 127.3657259065586 )
+                    true
+                }
+                R.id.busan -> {
+                    val address = getCurrentAddress(35.16001944, 129.1658083) //주소가 null 이 아닐 경우 UI 업데이트
+                    address?.let {
+                        binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
+                        binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
+                    }
+                    getAirQualityData(35.16001944, 129.1658083)
+                    true
+                }
+                R.id.pohang -> {
+                    val address = getCurrentAddress(36.00568611, 129.3616667) //주소가 null 이 아닐 경우 UI 업데이트
+                    address?.let {
+                        binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
+                        binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
+                    }
+                    // 두 번째 아이템이 클릭되었을 때 실행될 동작
+                    getAirQualityData(36.00568611, 129.3616667)
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
+
     private fun setRefreshButton() {
         binding.btnRefresh.setOnClickListener {
             updateUI()
         }
     }
+
 
     private fun updateUI() {
         locationProvider = LocationProvider(requireContext())
@@ -308,4 +373,6 @@ class WeatherFragment : Fragment() {
         })
         builder.create().show()
     }
+
+
 }
