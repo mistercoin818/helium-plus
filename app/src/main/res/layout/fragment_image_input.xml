@@ -1,0 +1,49 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 이미지 선택 버튼 -->
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Select Image" />
+
+        <!-- 선택한 이미지 미리보기 -->
+        <ImageView
+            android:id="@+id/ivSelectedImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:transitionName="imgTrans"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop" />
+
+        <!-- 데이터 입력 필드 -->
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:hint="Title" />
+
+        <EditText
+            android:id="@+id/etTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:hint="Time" />
+
+        <!-- Dashboard에 추가 버튼 -->
+        <Button
+            android:id="@+id/btnAddToDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Add to Dashboard" />
+
+    </LinearLayout>
+</layout>
