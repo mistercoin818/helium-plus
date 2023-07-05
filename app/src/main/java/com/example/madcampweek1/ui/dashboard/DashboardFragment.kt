@@ -22,10 +22,6 @@ import com.example.madcampweek1.GalleryActivity
 import com.example.madcampweek1.GetImageActivity
 import com.example.madcampweek1.R
 import com.example.madcampweek1.databinding.FragmentDashboardBinding
-
-import com.google.android.material.internal.ContextUtils
-import com.google.android.material.internal.ContextUtils.getActivity
-
 data class BoardItem(val image: String, val title: String, val time: String)
 class KashboardViewModel : ViewModel() {
     val itemList = ArrayList<BoardItem>()
