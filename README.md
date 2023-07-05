@@ -80,7 +80,31 @@ targetSdk: 33
 ### Tab 2 : 갤러리
 
 
-### Tab 3 : 
+갤러리 메인 화면입니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/338d9ecc-f21e-467f-adeb-99d8403f7e56" width="200" height="400"/>
+
+
+원하는 사진을 클릭하면 크게 볼 수 있습니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/9ca1a15d-2147-4726-ba85-c8aaac40a41e" width="200" height="400"/>
+
+
+사진첩 열기를 통해서 핸드폰 갤러리에 있는 사진을 추가할 수 있습니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/1737ef16-6e39-4708-9a0e-83a42f986b5b" width="200" height="400"/>
+
+
+원하는 사진이 추가되면 view 맨 아래에 사진이 추가된 모습을 볼 수 있습니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/afe56f5a-9088-4dea-85cf-4ed96c01f322" width="200" height="400"/>
+
+
+### Tab 3 : 날씨
 **메인화면**<br/>
 <img width="276" alt="image" src="https://github.com/mistercoin818/MadCampWeek1/assets/64831392/bb2939c1-e6f8-4122-8891-74efc1ab8612">
 
