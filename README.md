@@ -39,13 +39,48 @@ targetSdk: 33
 ## 🧭기능 설명
 
 
-### Tab 1
+### Tab 1 : 전화번호부
+핸드폰의 전화 앱으로부터 연락처를 불러와서 연락처를 띄워줍니다.
 
 
-### Tab 2
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/1e7a3382-1b74-421c-b3f0-a66ccee90b4a"  width="200" height="400"/>
 
 
-### Tab 3
+오른쪽 하단의 + 버튼을 누르면 전화 앱으로 연동되어 연락처를 추가할 수 있습니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/1d67ef4e-04e0-4ca8-acee-ef60260401cb"  width="200" height="400"/>
+
+
+"+" 버튼 위의 새로고침 버튼을 누르면 새로고침 버튼이 빙글빙글 돌아가며 전화앱으로부터 최신 연락처를 업데이트해옵니다.
+
+  
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/26bece19-17f4-49dd-b057-4ec60b7e05c6" width="200" height="400"/>
+
+
+맨 위의 돋보기 버튼을 누르면 전화번호든 이름이든 일치하는 연락처를 나타내어 줍니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/faee7c37-57cd-45a2-bf57-24e1e916de35" width="200" height="400"/>
+
+
+원하는 사람의 연락처를 터치하면 그 사람에게 전화를 걸 수 있도록 전화 앱으로 이동됩니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/27d87246-5913-4a7a-9218-4f713a94edfe" width="200" height="400"/>
+
+
+삭제하고 싶은 연락처를 길게 누르면 삭제할 지 물어보는 alert가 뜹니다. Yes를 누르면 삭제됩니다.
+
+
+<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/e3b0487d-6092-4890-b24b-093914acc845" width="200" height="400"/>
+
+
+
+### Tab 2 : 갤러리
+
+
+### Tab 3 : 
 **메인화면**<br/>
 <img width="276" alt="image" src="https://github.com/mistercoin818/MadCampWeek1/assets/64831392/bb2939c1-e6f8-4122-8891-74efc1ab8612">
 
