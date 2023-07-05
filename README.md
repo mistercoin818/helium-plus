@@ -106,7 +106,7 @@ targetSdk: 33
 
 ### Tab 3 : 날씨
 **메인화면**<br/>
-<img width="276" alt="image" src="https://github.com/mistercoin818/MadCampWeek1/assets/64831392/bb2939c1-e6f8-4122-8891-74efc1ab8612">
+<img width="257" alt="image" src="https://github.com/mistercoin818/MadCampWeek1/assets/64831392/53850fb0-eb50-4097-a3fc-f5ed5724c682">
 
 1. 위치
 2. 기온
@@ -142,7 +142,7 @@ targetSdk: 33
 7. 사이드바 열림 버튼
 
 **사이드바**<br/>
-<img width="310" alt="image" src="https://github.com/mistercoin818/MadCampWeek1/assets/64831392/43f07c94-15ab-4b2b-8a9b-84cf470a4555">
+<img width="281" alt="image" src="https://github.com/mistercoin818/MadCampWeek1/assets/64831392/4ab96d79-1b78-4252-b880-559bdb170a78">
 
 1. 헤더
 2. 대한민국 광역시 별 날씨 정보
