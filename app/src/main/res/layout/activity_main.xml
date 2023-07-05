@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F6E4E4"
-        app:tabRippleColor="#FF1313"
+        app:tabRippleColor="#4dC6e2"
         app:tabGravity="fill"
 
         app:tabIndicatorHeight="5dp"
