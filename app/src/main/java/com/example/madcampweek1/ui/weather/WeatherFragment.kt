@@ -91,8 +91,8 @@ class WeatherFragment : Fragment() {
                         binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
                         binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
                     }
-
                     getAirQualityData(37.514575, 127.0495556)
+                    drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.daejeon -> {
@@ -102,7 +102,7 @@ class WeatherFragment : Fragment() {
                         binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
                         binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
                     }
-
+                    drawerLayout.closeDrawer(GravityCompat.START)
                     getAirQualityData(36.37366895657045, 127.3657259065586 )
                     true
                 }
@@ -112,17 +112,48 @@ class WeatherFragment : Fragment() {
                         binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
                         binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
                     }
+                    drawerLayout.closeDrawer(GravityCompat.START)
                     getAirQualityData(35.16001944, 129.1658083)
                     true
                 }
-                R.id.pohang -> {
-                    val address = getCurrentAddress(36.00568611, 129.3616667) //주소가 null 이 아닐 경우 UI 업데이트
+                R.id.daegu -> {
+                    val address = getCurrentAddress(35.8715, 128.6017) //주소가 null 이 아닐 경우 UI 업데이트
                     address?.let {
                         binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
                         binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
                     }
-                    // 두 번째 아이템이 클릭되었을 때 실행될 동작
-                    getAirQualityData(36.00568611, 129.3616667)
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    getAirQualityData(35.8715, 128.6017)
+                    true
+                }
+                R.id.ulsan -> {
+                    val address = getCurrentAddress(35.546, 129.361245) //주소가 null 이 아닐 경우 UI 업데이트
+                    address?.let {
+                        binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
+                        binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
+                    }
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    getAirQualityData(35.546, 129.361245)
+                    true
+                }
+                R.id.incheon -> {
+                    val address = getCurrentAddress(37.46369169, 126.6502972) //주소가 null 이 아닐 경우 UI 업데이트
+                    address?.let {
+                        binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
+                        binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
+                    }
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    getAirQualityData(37.46369169, 126.6502972)
+                    true
+                }
+                R.id.gwangju -> {
+                    val address = getCurrentAddress(35.13301749, 126.9025572) //주소가 null 이 아닐 경우 UI 업데이트
+                    address?.let {
+                        binding.tvLocationTitle.text = "${it.thoroughfare}" // 예시: 역삼 1동
+                        binding.tvLocationSubtitle.text = "${it.countryName} ${it.adminArea}" // 예시 : 대한민국 서울특별시
+                    }
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    getAirQualityData(35.13301749, 126.9025572)
                     true
                 }
 
