@@ -2,7 +2,7 @@
 ![KakaoTalk_20230705_022259500](https://github.com/mistercoin818/MadCampWeek1/assets/63841863/a9c72c29-44ec-4d70-b529-c1ee10e652b2)
 
 
-## Team Members
+## 👩‍👦‍👦Team Members
 > 1분반
 
 |  Name  |                    GitHub ID                    |          소속           |
@@ -12,7 +12,7 @@
 | 김태훈 | [mistercoin818](https://github.com/mistercoin818) |    성균관대학교 소프트웨어학과    |
 
 
-## Application 개요
+## 📱Application 개요
 2023 KAIST 여름 몰입캠프 공통과제 1(2023.06.29. ~ 2023.07.05.)을 수행한 결과물입니다.
 
 
@@ -25,7 +25,7 @@
 3. 탭3: 위치 기반 날씨 정보
 
 
-## Development Environment
+## 💣Development Environment
 * OS : Android
 * SDK 
 ```
@@ -36,7 +36,7 @@ targetSdk: 33
 * IDE : Android Studio
 * Target Device : Galaxy S7
 
-## 기능 설명
+## 🧭기능 설명
 
 
 ### Tab 1
