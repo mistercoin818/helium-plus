@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
     private lateinit var navController: NavController
-    private val tabTextList = listOf("Contact", "Photos", "My Health")
-    private val tabIconList = listOf(R.drawable.icon_01n, R.drawable.icon_01n, R.drawable.icon_02d)
+    private val tabTextList = listOf("Contact", "Photos", "Weather")
+    private val tabIconList = listOf(R.drawable.contacticon, R.drawable.photoicon, R.drawable.weathericon3)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

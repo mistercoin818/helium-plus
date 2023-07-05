@@ -27,20 +27,22 @@ class KashboardViewModel : ViewModel() {
     val itemList = ArrayList<BoardItem>()
     init {
         // 초기 데이터 추가         /*make itemList*/
-        itemList.add(BoardItem("https://3.gall-img.com/tdgall/files/attach/images/82/332/321/157/d982a4327f51a4b15bb5758983dbe235.jpg","농담입니다","2023/07/01"))
-        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNjQg/MDAxNjM5NzIyOTA2MzYy.ED0XBboWb4DNEkDYpc_AUbg1xuSHrIvU35oi0rrsAy8g.YQ2DwI1uwAZvgP6AMMIZ53lCsP5gc0FeMEhXwAOfg8kg.JPEG.xvx404/KakaoTalk_20211129_191956435.jpg?type=w966","어찌하면좋곰","2023/07/01"))
-        itemList.add(BoardItem("https://3.gall-img.com/tdgall/files/attach/images/82/332/321/157/d982a4327f51a4b15bb5758983dbe235.jpg","농담입니다","2023/07/01"))
-        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNjQg/MDAxNjM5NzIyOTA2MzYy.ED0XBboWb4DNEkDYpc_AUbg1xuSHrIvU35oi0rrsAy8g.YQ2DwI1uwAZvgP6AMMIZ53lCsP5gc0FeMEhXwAOfg8kg.JPEG.xvx404/KakaoTalk_20211129_191956435.jpg?type=w966","어찌하면좋곰","2023/07/01"))
-        itemList.add(BoardItem("https://3.gall-img.com/tdgall/files/attach/images/82/332/321/157/b7540af0387c5465cd5146fa0a5d1353.jpg","농담입니다","2023/07/01"))
-        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNDIg/MDAxNjM5NzI0NTM0NTQy.Kg00KseRfKe1s7IYhOxaA_q8ZwPqrmyf5rg1loN9scEg.UGdQ2hlKt4RzmTXAlMuzwWM9q3F3L88euDZZfwvw8Wwg.JPEG.xvx404/KakaoTalk_20211104_114046906.jpg?type=w966","농담곰인물","2023/07/01"))
-        itemList.add(BoardItem("https://pbs.twimg.com/media/E0r14B9VoAIH-Oy.jpg","농담입니다","2023/07/01"))
-        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNjQg/MDAxNjM5NzIyOTA2MzYy.ED0XBboWb4DNEkDYpc_AUbg1xuSHrIvU35oi0rrsAy8g.YQ2DwI1uwAZvgP6AMMIZ53lCsP5gc0FeMEhXwAOfg8kg.JPEG.xvx404/KakaoTalk_20211129_191956435.jpg?type=w966","어찌하면좋곰","2023/07/01"))
-        itemList.add(BoardItem("https://pbs.twimg.com/media/FACQ-ZwUUAE5qw-?format=jpg&name=large","농담입니다","2023/07/01"))
-        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNDIg/MDAxNjM5NzI0NTM0NTQy.Kg00KseRfKe1s7IYhOxaA_q8ZwPqrmyf5rg1loN9scEg.UGdQ2hlKt4RzmTXAlMuzwWM9q3F3L88euDZZfwvw8Wwg.JPEG.xvx404/KakaoTalk_20211104_114046906.jpg?type=w966","농담곰인물","2023/07/01"))
-        itemList.add(BoardItem("https://pbs.twimg.com/media/FACQ-IoVIAcS9Y3.jpg:small","농담입니다","2023/07/01"))
-        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNjQg/MDAxNjM5NzIyOTA2MzYy.ED0XBboWb4DNEkDYpc_AUbg1xuSHrIvU35oi0rrsAy8g.YQ2DwI1uwAZvgP6AMMIZ53lCsP5gc0FeMEhXwAOfg8kg.JPEG.xvx404/KakaoTalk_20211129_191956435.jpg?type=w966","어찌하면좋곰","2023/07/01"))
-        itemList.add(BoardItem("https://3.gall-img.com/tdgall/files/attach/images/82/392/830/064/b7f74c84dd15dad09dd4f9abd619721c.jpg","농담입니다","2023/07/01"))
-        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNDIg/MDAxNjM5NzI0NTM0NTQy.Kg00KseRfKe1s7IYhOxaA_q8ZwPqrmyf5rg1loN9scEg.UGdQ2hlKt4RzmTXAlMuzwWM9q3F3L88euDZZfwvw8Wwg.JPEG.xvx404/KakaoTalk_20211104_114046906.jpg?type=w966","농담곰인물","2023/07/01"))
+        itemList.add(BoardItem("https://3.gall-img.com/tdgall/files/attach/images/82/332/321/157/d982a4327f51a4b15bb5758983dbe235.jpg","능이버섯곰","2023/07/05"))
+        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNjQg/MDAxNjM5NzIyOTA2MzYy.ED0XBboWb4DNEkDYpc_AUbg1xuSHrIvU35oi0rrsAy8g.YQ2DwI1uwAZvgP6AMMIZ53lCsP5gc0FeMEhXwAOfg8kg.JPEG.xvx404/KakaoTalk_20211129_191956435.jpg?type=w966","어찌하면좋곰","2023/07/05"))
+        itemList.add(BoardItem("https://pbs.twimg.com/media/FACQ9-hUcAcA_11.jpg:large","왠지잘될곰","2023/07/04"))
+        itemList.add(BoardItem("https://i.pinimg.com/236x/20/54/47/20544776a249886254358f5da2d74229.jpg","더블따봉곰","2023/07/04"))
+        itemList.add(BoardItem("https://3.gall-img.com/tdgall/files/attach/images/82/332/321/157/b7540af0387c5465cd5146fa0a5d1353.jpg","천재곰","2023/07/04"))
+        itemList.add(BoardItem("https://postfiles.pstatic.net/MjAyMTEyMTdfNDIg/MDAxNjM5NzI0NTM0NTQy.Kg00KseRfKe1s7IYhOxaA_q8ZwPqrmyf5rg1loN9scEg.UGdQ2hlKt4RzmTXAlMuzwWM9q3F3L88euDZZfwvw8Wwg.JPEG.xvx404/KakaoTalk_20211104_114046906.jpg?type=w966","농담곰인물","2023/07/03"))
+        itemList.add(BoardItem("https://pbs.twimg.com/media/E0r14B9VoAIH-Oy.jpg","파검도곰","2023/07/03"))
+        itemList.add(BoardItem("https://i.pinimg.com/236x/bb/33/8a/bb338a8d78349a986a2255137c5ff80b.jpg","나사빠졌곰","2023/07/02"))
+        itemList.add(BoardItem("https://pbs.twimg.com/media/FACQ-ZwUUAE5qw-?format=jpg&name=large","늦었곰","2023/07/02"))
+        itemList.add(BoardItem("https://i.pinimg.com/550x/ba/35/ee/ba35ee603c48d374c2c788e978e0c32b.jpg","짜증나곰","2023/07/02"))
+        itemList.add(BoardItem("https://pbs.twimg.com/media/FACQ-IoVIAcS9Y3.jpg:small","일단해보곰","2023/07/01"))
+        itemList.add(BoardItem("https://jjal.today/data/file/gallery/654777533_LXcuaI8Q_bc6f86a21271009c43de1783cb6780dc9e657a4d.jpeg","숨참곰","2023/07/01"))
+        itemList.add(BoardItem("https://3.gall-img.com/tdgall/files/attach/images/82/392/830/064/b7f74c84dd15dad09dd4f9abd619721c.jpg","가소롭곰","2023/07/01"))
+        itemList.add(BoardItem("https://www.bigjungbo.com/files/attach/images/163/040/215/007/feaf84f2c1198a3de965956de7b6a792.jpeg","공부싫곰","2023/07/01"))
+        itemList.add(BoardItem("https://i.pinimg.com/474x/5f/dc/64/5fdc644e0ffd8676b7d9d316b1609f9a.jpg","행복하곰","2023/07/01"))
+        itemList.add(BoardItem("https://velog.velcdn.com/images/galee/post/63f6ebfd-4b31-41aa-ab57-59e831b7a8fb/image.jpg","가보자곰","2023/07/01"))
     }
     fun addBoardItem(boardItem: BoardItem) {
         itemList.add(boardItem)
@@ -137,7 +139,7 @@ class DashboardFragment : Fragment() {
         boardAdapter.notifyDataSetChanged()
         val RV_board :RecyclerView = binding.rvBoard
         RV_board.adapter = boardAdapter
-        RV_board.layoutManager = GridLayoutManager(context, 3, GridLayoutManager.HORIZONTAL, false)
+        RV_board.layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
 
         // 뷰 가릴려고 별짓을 다 하는 중.
 //        dashboardView = View.inflate(context, R.layout.fragment_dashboard, null) // 새로운 View 생성
