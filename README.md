@@ -43,9 +43,6 @@ targetSdk: 33
 핸드폰의 전화 앱으로부터 연락처를 불러와서 연락처를 띄워줍니다.
 
 
-<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/1e7a3382-1b74-421c-b3f0-a66ccee90b4a"  width="200" height="400"/>
-
-
 오른쪽 하단의 + 버튼을 누르면 전화 앱으로 연동되어 연락처를 추가할 수 있습니다.
 
 
@@ -53,9 +50,6 @@ targetSdk: 33
 
 
 "+" 버튼 위의 새로고침 버튼을 누르면 새로고침 버튼이 빙글빙글 돌아가며 전화앱으로부터 최신 연락처를 업데이트해옵니다.
-
-  
-<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/26bece19-17f4-49dd-b057-4ec60b7e05c6" width="200" height="400"/>
 
 
 맨 위의 돋보기 버튼을 누르면 전화번호든 이름이든 일치하는 연락처를 나타내어 줍니다.
@@ -71,10 +65,6 @@ targetSdk: 33
 
 
 삭제하고 싶은 연락처를 길게 누르면 삭제할 지 물어보는 alert가 뜹니다. Yes를 누르면 삭제됩니다.
-
-
-<img src="https://github.com/mistercoin818/MadCampWeek1/assets/63841863/e3b0487d-6092-4890-b24b-093914acc845" width="200" height="400"/>
-
 
 
 ### Tab 2 : 갤러리
